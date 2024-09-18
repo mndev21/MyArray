@@ -11,8 +11,6 @@ public:
 
     T &operator[](std::size_t index) const;
 
-    //const T &operator[](std::size_t index) const;
-
     void fill(const T &value);
 
     T &front();
@@ -39,11 +37,6 @@ void MyArray<T, N>::fill(const T &value) {
         data[i] = value;
     }
 }
-
-/*template <typename T, std::size_t N>
-const T& MyArray<T, N>::operator[](std::size_t index) const {
-    return data[index];
-}*/
 
 template <typename T, std::size_t N>
 T& MyArray<T, N>::operator[](std::size_t index) const {
